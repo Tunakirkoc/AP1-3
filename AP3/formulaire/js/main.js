@@ -39,6 +39,6 @@ function recapitulatif() {
     link.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(recap);
     link.download = 'recapitulatif.txt';
     link.click();
-    
+    // Debug
     console.log(recap)
 }
