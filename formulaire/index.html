@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap">
+    <script src="js/main.js"></script>
+</head>
+
+<!-- 
+=========================
+  ________  ___   _____ 
+ /_  __/ / / / | / /   |
+  / / / / / /  |/ / /| |
+ / / / /_/ / /|  / ___ |
+/_/  \____/_/ |_/_/  |_|
+=========================
+-->
+
+<body>
+    <div class="box">
+        <form id="formulaire" onsubmit="return recapitulatif()" >
+            <h2>Nouvel Inventaire</h2>
+            <h2>Personne concernée :</h2>
+            <div id="from">
+                <input type="text" id="nom" name="nom" placeholder="Nom de la personne">
+                <input type="text" id="prenom" name="prenom" placeholder="Prénom de la personne">
+                <select id="poste" name="poste">
+                    <option value="" disabled selected hidden>Poste...</option>
+                    <option value="PDG">PDG</option>
+                    <option value="Assistante de direction">Assistante de direction</option>
+                    <option value="Commercial">Commercial</option>
+                    <option value="Comptable">Comptable</option>
+                    <option value="Développeur">Développeur</option>
+                    <option value="Directeur Commercial">Directeur Commercial</option>
+                    <option value="Directeur Financier">Directeur Financier</option>
+                    <option value="Directeur techinque">Directeur techinque</option>
+                </select>
+                <h2>Matériel :</h2>
+                <div id="materiel" class="radio">Type de matériel :
+                    <input type="radio" id="materielBureau" name="materiel" value="Bureau">
+                    <label for="materielBureau">Bureau</label>
+                    <input type="radio" id="materielPortable" name="materiel" value="Portable">
+                    <label for="materielPortable">Portable</label>
+                </div>
+                <div id="os" class="radio">Système d'Exploitation :
+                    <input type="radio" id="osWindows10" name="os" value="Windows10">
+                    <label for="osWindows10">Windows 10</label>
+                    <input type="radio" id="osWindows11" name="os" value="Windows11">
+                    <label for="osWindows11">Windows 11</label>
+                </div>
+                <input type="text" id="modele" name="modele" placeholder="Modèle">
+                <input type="text" id="processeur" name="processeur" list="datalistProcesseur" placeholder="Processeur...">
+                <datalist id="datalistProcesseur">
+                    <option value="AMD Ryzen 5">
+                    <option value="AMD Ryzen 7">
+                    <option value="Intel Core i3">
+                    <option value="Intel Core i5">
+                </datalist>
+                <input type="text" id="ram" name="ram" list="datalistRam" placeholder="Ram...">
+                <datalist id="datalistRam">
+                    <option value="8 Go">
+                    <option value="16 Go">
+                </datalist>
+                <input type="text" id="stockage" name="stockage" list="datalistStockage" placeholder="Disque Dur...">
+                <datalist id="datalistStockage">
+                    <option value="256 Go SSD">
+                    <option value="512 Go SSD">
+                    <option value="1 To SSD">
+                    <option value="500 Go HDD">
+                    <option value="1 To HDD">
+                </datalist>
+                <input type="text" id="ecran" name="ecran" list="datalistEcran" placeholder="Ecran...">
+                <datalist id="datalistEcran">
+                    <option value="14 HD">
+                    <option value="13,3 HD">
+                    <option value="14 FHD">
+                    <option value="15,6 FHD">
+                    <option value="17 FHD">
+                    <option value="19 FHD">
+                    <option value="21 FHD">
+                </datalist>
+                <input type="text" id="cartegraphique" name="cartegraphique" list="datalistCartegraphique" placeholder="Carte Graphique...">
+                <datalist id="datalistCartegraphique">
+                    <option value="Carte graphique AMD Radeon">
+                    <option value="Carte graphique Intel UHD">
+                    <option value="Carte graphique Intel UHD 630">
+                </datalist>
+                <input type="submit" value="Envoyer les données">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

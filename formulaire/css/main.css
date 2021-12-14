@@ -1,0 +1,97 @@
+body {
+  font-family: "Roboto";
+  color: white;
+  background-color: black;
+  font-size: 1.1em;
+  margin: 0;
+  padding: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: linear-gradient(
+    to right top,
+    #1db9ff,
+    #a2a0ff,
+    #fb7ad4,
+    #ff677a,
+    #f48603
+  );
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.8);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  text-align: center;
+  min-width: 550px;
+}
+
+.radio {
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+select {
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+option {
+  background: black;
+}
+
+input[type="text"] {
+  width: 100%;
+}
+
+input[type="radio"] {
+  cursor: pointer;
+}
+
+.box input[type="submit"] {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #03a9f4;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-top: 25px;
+}
+
+input[type="submit"]:hover {
+  background-color: rgba(3, 169, 244, 0.7);
+}
+
+/* https://codepen.io/tunakirkoc/pen/qBPZqeM */
