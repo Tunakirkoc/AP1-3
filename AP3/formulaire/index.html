@@ -26,9 +26,9 @@
             <h2>Nouvel Inventaire</h2>
             <h2>Personne concernée :</h2>
             <div id="from">
-                <input type="text" id="nom" name="nom" placeholder="Nom de la personne">
-                <input type="text" id="prenom" name="prenom" placeholder="Prénom de la personne">
-                <select id="poste" name="poste">
+                <input type="text" id="nom" name="nom" placeholder="Nom de la personne" required="required" pattern="[a-zA-Z- ]+">
+                <input type="text" id="prenom" name="prenom" placeholder="Prénom de la personne" required="required" pattern="[a-zA-Z- ]+">
+                <select id="poste" name="poste" required="required">
                     <option value="" disabled selected hidden>Poste...</option>
                     <option value="PDG">PDG</option>
                     <option value="Assistante de direction">Assistante de direction</option>
@@ -41,31 +41,31 @@
                 </select>
                 <h2>Matériel :</h2>
                 <div id="materiel" class="radio">Type de matériel :
-                    <input type="radio" id="materielBureau" name="materiel" value="Bureau">
+                    <input type="radio" id="materielBureau" name="materiel" value="Bureau" required="required">
                     <label for="materielBureau">Bureau</label>
-                    <input type="radio" id="materielPortable" name="materiel" value="Portable">
+                    <input type="radio" id="materielPortable" name="materiel" value="Portable" required="required">
                     <label for="materielPortable">Portable</label>
                 </div>
                 <div id="os" class="radio">Système d'Exploitation :
-                    <input type="radio" id="osWindows10" name="os" value="Windows10">
+                    <input type="radio" id="osWindows10" name="os" value="Windows10" required="required">
                     <label for="osWindows10">Windows 10</label>
-                    <input type="radio" id="osWindows11" name="os" value="Windows11">
+                    <input type="radio" id="osWindows11" name="os" value="Windows11" required="required">
                     <label for="osWindows11">Windows 11</label>
                 </div>
-                <input type="text" id="modele" name="modele" placeholder="Modèle">
-                <input type="text" id="processeur" name="processeur" list="datalistProcesseur" placeholder="Processeur...">
+                <input type="text" id="modele" name="modele" placeholder="Modèle" required="required" pattern="[a-zA-Z0-9-, ]+">
+                <input type="text" id="processeur" name="processeur" list="datalistProcesseur" placeholder="Processeur..." required="required" pattern="[a-zA-Z0-9-, ]+">
                 <datalist id="datalistProcesseur">
                     <option value="AMD Ryzen 5">
                     <option value="AMD Ryzen 7">
                     <option value="Intel Core i3">
                     <option value="Intel Core i5">
                 </datalist>
-                <input type="text" id="ram" name="ram" list="datalistRam" placeholder="Ram...">
+                <input type="text" id="ram" name="ram" list="datalistRam" placeholder="Ram..." required="required" pattern="[a-zA-Z0-9-, ]+">
                 <datalist id="datalistRam">
                     <option value="8 Go">
                     <option value="16 Go">
                 </datalist>
-                <input type="text" id="stockage" name="stockage" list="datalistStockage" placeholder="Disque Dur...">
+                <input type="text" id="stockage" name="stockage" list="datalistStockage" placeholder="Disque Dur..." required="required" pattern="[a-zA-Z0-9-, ]+">
                 <datalist id="datalistStockage">
                     <option value="256 Go SSD">
                     <option value="512 Go SSD">
@@ -73,7 +73,7 @@
                     <option value="500 Go HDD">
                     <option value="1 To HDD">
                 </datalist>
-                <input type="text" id="ecran" name="ecran" list="datalistEcran" placeholder="Ecran...">
+                <input type="text" id="ecran" name="ecran" list="datalistEcran" placeholder="Ecran..." required="required" pattern="[a-zA-Z0-9-, ]+">
                 <datalist id="datalistEcran">
                     <option value="14 HD">
                     <option value="13,3 HD">
@@ -83,7 +83,7 @@
                     <option value="19 FHD">
                     <option value="21 FHD">
                 </datalist>
-                <input type="text" id="cartegraphique" name="cartegraphique" list="datalistCartegraphique" placeholder="Carte Graphique...">
+                <input type="text" id="cartegraphique" name="cartegraphique" list="datalistCartegraphique" placeholder="Carte Graphique..." required="required" pattern="[a-zA-Z0-9-, ]+">
                 <datalist id="datalistCartegraphique">
                     <option value="Carte graphique AMD Radeon">
                     <option value="Carte graphique Intel UHD">
@@ -91,6 +91,7 @@
                 </datalist>
                 <input type="submit" value="Envoyer les données">
             </div>
+            <
         </form>
     </div>
 </body>

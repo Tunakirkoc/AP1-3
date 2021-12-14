@@ -33,7 +33,7 @@ function recapitulatif() {
     recap += "Carte graphique : ";
     recap += document.getElementById("cartegraphique").value;
     if (confirm(recap)) {
-        // recap to file download
+        // var recap to file download
         var link = document.createElement('a');
         link.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(recap);
         link.download = 'recapitulatif.txt';
