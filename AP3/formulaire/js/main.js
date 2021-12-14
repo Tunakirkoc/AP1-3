@@ -32,15 +32,13 @@ function recapitulatif() {
     recap += "\n";
     recap += "Carte graphique : ";
     recap += document.getElementById("cartegraphique").value;
-    if (confirm(recap)) {
-        // var recap to file download
-        var link = document.createElement('a');
-        link.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(recap);
-        link.download = 'recapitulatif.txt';
-        link.click();
-    }
-    else {
-        console.log(recap)
-        return false;
-    }
+    // inner divrecap pour afficher le recapitulatif
+    document.getElementById("divrecap").innerHTML = recap;
+    // var recap to file download
+    var link = document.createElement('a');
+    link.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(recap);
+    link.download = 'recapitulatif.txt';
+    link.click();
+    
+    console.log(recap)
 }

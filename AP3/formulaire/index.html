@@ -22,7 +22,7 @@
 
 <body>
     <div class="box">
-        <form id="formulaire" onsubmit="return recapitulatif()" >
+        <form id="formulaire" onsubmit="recapitulatif();return false" >
             <h2>Nouvel Inventaire</h2>
             <h2>Personne concernée :</h2>
             <div id="from">
@@ -91,7 +91,8 @@
                 </datalist>
                 <input type="submit" value="Envoyer les données">
             </div>
-            <
+            <div id="divrecap">
+            </div>
         </form>
     </div>
 </body>
